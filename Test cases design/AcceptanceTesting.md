@@ -1,4 +1,3 @@
-
 # :blue_book: Introduction
 
 ### What is acceptance testing?
@@ -29,15 +28,20 @@ After an exploratory testing session we can highlight several specific test case
 
 # :ballot_box_with_check: Test Cases Design
 
-### Test Case #1 - *Download Voicemod for free*
+## <center> Test Case #1 - *Download Voicemod for free* </center>
 
 **Description:** It is possible to download the executable by clicking on the button on the main page.
+
+
 
 | User Story |
 |--|
 | **As an** end user/customer|--|
 **I want** to use VOICEMOD|--|
 **So I can** click on the "Download Voicemod for Free" button to download the executable |
+
+
+
 
 **Desired behaviour:** Using the button "DOWNLOAD VOICEMOD FOR FREE" the user will be able to download the executable file to install the software on his computer.
 
@@ -47,9 +51,11 @@ After an exploratory testing session we can highlight several specific test case
  3. Verify that the download of the executable happens
 
 **Feedback:** 
-___
 
-### Test Case #2 - *Create a new account*
+> This is simply one of the most critical test cases as the core
+> business is in this app, all users must be able to access it.
+
+## <center> Test Case #2 - *Create a new account* </center>
 
 **Description:** It´s possible to create a new account 
 
@@ -73,10 +79,13 @@ ___
  6. Verify that we´ve finished the process.
 
 **Feedback:** 
-___
+
+> The creation of a new user is a critical test case as attracting new
+> users to the app should not be a problem in the production
+> environment.
 
 
-### Test Case #3 - *Main links*
+## <center> **Test Case #3 - *Main links*** </center>
 
 **Description:** The banner links must redirect to the correct website.
 
@@ -96,11 +105,16 @@ By clicking on the links "Voicemod" logo, "Soundboard", "FreeSounds"... I can na
  
 **Feedback:** 
 
-___
+> The user must be able to navigate through the different sections of
+> the website, which is why the links in the banner must be accessible.
+> These links are statistically the most used, since according to the UX
+> the focus of a customer is on the top of the page most of the time
+> during the first moments of access to the website.
 
 
 
-### Test Case #4 - *FAQ searching*
+
+## <center> Test Case #4 - *FAQ searching* </center>
 
 **Description:** 
 
@@ -123,12 +137,14 @@ By using the search bar, we will be able to enter a topic we wish to search for 
 
 **Feedback:** 
 
+> All customers should be able to solve their problems themselves by
+> consulting the FAQ section because if the customer can easily solve
+> the problem by himself he will not overwhelm the technical support
+> team.
 
-___
 
 
-
-### Test Case #5 -*Feedback & Support*
+## <center> Test Case #5 -*Feedback & Support* </center>
 
 **Description:** Using the URL https://www.voicemod.net/support/?source=helpcenter I will be able to submit a support request.
 
@@ -158,20 +174,18 @@ By accessing the support form and completing it I will be able to submit my supp
 
 **Feedback:** 
 
+> This is an important but not critical test case because in case of
+> need, if a user cannot solve a problem in the FAQ, he/she should be
+> able to contact the technical support team. This is very important
+> because it gives the feeling that the brand provides all the necessary
+> procedures to satisfy the customer.
 
 
 
 
-## :bulb: Other interesting test cases:
--    The web is the one that we are expecting (ie, link is https and we have and expected result of that).
--   The logo is the one that we are expecting on the top-left corner.
--   We are able to select many languages and check if the website is correctly translated (header title is the expected one for each language).
--   We are able to download the software and trusting that binaries are the expected ones.
--   We are able to contact the support team (in a blind day help from the outside is very welcome, even more when we did not realize about our own problems, other ones could give us some light).
-These five acceptance cases were taken into account according to the next criteria:
-- First Log in: Set your name, Upload a new image, Set up a banner, Profile bio.
+## :heavy_plus_sign: Other interesting test cases:
 
-**The company image is probably the most important thing we must preserve**. We must assure that people, when they want to access to our resources, they really do it, and they trust in them. Otherwise, we can blame ourselves that we are not protecting our own customers from being hacked at our expense, neither the brand future.
--   To have quality in the offered resources means to mitigate the bad experience with them. However, sometimes happen that our own users realize about the software problems before us. We must always keep the door open for the customer feedback. At the end, all of them together will spend so much time than the own testers doing (indirectly) the testing for the platform. They are the best testers, even when we do not want the bugs arrives to them.
--   Voicemod 's users comes from every part of the globe. We need they can understand our main website in the most used languages.
--   We should assure that they are able to download our trusted-software! I guess that no explanation is needed at this point :)
+- Of course, the page should be up as much of the time as possible according to demand.
+- The brand logo can be expected to be in the top left corner according to UX standards.
+- It should be possible to change languages using the most popular plugins such as in chrome using Google Translator, in this case some texts are affected by language changes "breaking" the front-end.
+- Check the first login and flows like Set your name, Upload a new image, Set up a banner, Profile bio.
