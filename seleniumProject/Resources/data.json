@@ -1,0 +1,38 @@
+{
+  "CREDENTIALS":
+    {
+      "email": "example@example.com",
+      "code": "012345"
+    },
+  "ELEMENTS":
+    {
+        "download_bottom" : "div[class='download-button'] a[type='button']",
+        "logo_banner" : "#logo",
+        "voice_banner" : "//a[normalize-space()='Voice Changer for PC']",
+        "soundbar_banner" : "//a[normalize-space()='Soundboard']",
+        "voicelab_banner" : "//a[normalize-space()='Voicelab']",
+        "my_account" : "//a[normalize-space()='My Account']",
+        "email" : "//input[@id='test']",
+        "continue_email" : "[data-testid='email-button']",
+        "validation_code": "#inputBox0",
+        "FAQ": "//a[normalize-space()='FAQ']",
+        "search": "#query",
+        "results": ".search-results-list",
+        "submit_request": "//a[contains(text(),'Submit a request')]",
+        "accept_cookies": "#onetrust-accept-btn-handler",
+        "drop_list": ".quform-inner.quform-inner-1_7.quform-inner-select",
+        "download": "ul[role='listbox'] > li:nth-of-type(2)"
+    },
+   "TITLES":
+    {
+        "Account" : "Voicemod Account",
+        "home_title" : "Free Real Time Voice Changer & Modulator - Voicemod",
+        "voice_title" : "Free Voice Changer for Multiplayer Games and Chat - Voicemod",
+        "soundbar_title" : "Soundboard: Free PC Meme Sound Effects App - Voicemod",
+        "voicelab_title" : "Voicelab Voice Maker: Custom Voices Generator & Editor",
+        "validate_email" : "Validate email code",
+        "search_results": "Search results – Voicemod",
+        "lets talk": "Support – Voicemod Voice Changer & Modulator. Let's Talk!"
+    }
+
+}
