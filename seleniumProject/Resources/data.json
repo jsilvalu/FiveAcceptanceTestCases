@@ -21,7 +21,8 @@
         "submit_request": "//a[contains(text(),'Submit a request')]",
         "accept_cookies": "#onetrust-accept-btn-handler",
         "drop_list": ".quform-inner.quform-inner-1_7.quform-inner-select",
-        "download": "ul[role='listbox'] > li:nth-of-type(2)"
+        "download": "ul[role='listbox'] > li:nth-of-type(2)",
+        "categories": ".categories.blocks"
     },
    "TITLES":
     {

@@ -1,11 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import json
-
 import pytest
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 from POMProject.FAQ.faq import FAQ
 from POMProject.Home.home import Home
@@ -13,6 +10,10 @@ from POMProject.Account.account import Account
 
 
 def get_json_data():
+    """
+    Read the json file with data to be used in the test cases.
+    :return json.load(file) read stream with the json information
+    """""
     with open('Resources/data.json', 'r', encoding="utf-8") as file:
         return json.load(file)
 
@@ -21,7 +22,7 @@ class TestWebsite:
 
     @pytest.fixture(autouse=True)
     def browser_setup_and_teardown(self):
-        self.driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
+        self.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
         self.driver.maximize_window()
         self.driver.implicitly_wait(15)
         self.driver.get("https://www.voicemod.net/")
@@ -43,7 +44,8 @@ class TestWebsite:
     @pytest.mark.skipif(False, reason="Test skipped by user")
     def test2_create_new_account(self):
         """
-
+        Simulates the creation of a new user by entering always the same parameters: example@example.com 
+        and the code 123456.
         """""
         print("TEST #2 - Create a new account")
         Account.create_new_account(self.driver, data=self.data)
@@ -67,9 +69,9 @@ class TestWebsite:
         FAQ.navigate_to_faq(self.driver, data=self.data)
 
     @pytest.mark.skipif(False, reason="Test skipped by user")
-    def test5_feedback_support(self):
+    def test5_faq_categories(self):
         """
-        By accessing the support form and completing it I will be able to submit my support request.
+        Verify that categories are displayed in faq       
         """""
         print("TEST #5 - Feedback & Support")
-        FAQ.submit_request(self.driver, data=self.data)
+        FAQ.check_categories(self.driver, data=self.data)
