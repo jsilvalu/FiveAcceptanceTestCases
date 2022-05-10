@@ -46,8 +46,10 @@ _To prepare the necessary environment for the execution of the process you can f
    ```
 
 5. Install **webdriver_manager**:
+
 Via **pypi**:
 [Download webdriver_manager](https://pypi.org/project/webdriver-manager/)
+
 Via **pip**:
    ```sh
    pip install webdriver-manager
