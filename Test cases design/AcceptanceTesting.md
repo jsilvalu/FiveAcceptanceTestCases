@@ -1,3 +1,126 @@
+<br  />
+
+<div  align="center">
+
+<h3  align="center">Automation Testing</h3>
+
+<p  align="center"> 5 acceptance test cases </p>
+
+</div>
+
+<br  />
+
+  
+  
+
+<!-- ABOUT THE PROJECT -->
+
+## :open_file_folder: About The Project
+
+  
+
+The following project contains the development of five Selenium-based acceptance test cases with Python.
+
+These five test cases were analysed theoretically in the root directory of the repository.
+
+  
+  
+
+### Built With
+
+  
+
+* [Selenium](https://www.selenium.dev/)
+
+* [Python](https://www.python.org/), in this case i used Python 3.10
+
+* [Pytest](https://docs.pytest.org/)
+
+  
+  
+  
+  
+
+<!-- GETTING STARTED -->
+
+## :white_check_mark: Getting Started
+
+  
+
+### Installation
+
+  
+
+_To prepare the necessary environment for the execution of the process you can follow the steps below: ._
+
+  
+
+1.  **Access** to [my repository](https://github.com/jsilvalu/FiveAcceptanceTestCases)
+
+2.  **Clone** the repo
+
+```sh
+
+git clone https://github.com/jsilvalu/FiveAcceptanceTestCases
+
+```
+
+3. Install **Python** from the official site:
+
+[Download Python](https://www.python.org/downloads/)
+
+  
+
+4. Install **Selenium Webdriver** packages:
+
+Via **pip**:
+
+```sh
+
+pip install selenium
+
+```
+
+  
+
+5. Install **webdriver_manager**:
+
+Via **pypi**:
+
+[Download webdriver_manager](https://pypi.org/project/webdriver-manager/)
+
+Via **pip**:
+
+```sh
+
+pip install webdriver-manager
+
+```
+
+  
+  
+  
+
+<!-- USAGE EXAMPLES -->
+
+## :bulb: Usage
+
+  
+  
+
+With the above requirements it is possible to run the automatic tests. My advice is to use Pycharm as IDE to run it. We can edit the run configuration and add additional arguments like:
+
+```sh
+
+--html=reports/test_report.html
+
+```
+
+  
+  
+  
+
+
 # :blue_book: Introduction
 
 ### What is acceptance testing?
@@ -144,41 +267,31 @@ By using the search bar, we will be able to enter a topic we wish to search for 
 
 
 
-## <center> Test Case #5 -*Feedback & Support* </center>
+## <center> Test Case #5 -*FAQ Categories* </center>
 
-**Description:** Using the URL https://www.voicemod.net/support/?source=helpcenter I will be able to submit a support request.
+**Description:** Using the FAQ section you will be able to view the suggested items.
 
 | User Story |
 |--|
 | **As an** end user/customer|--|
-**I want** to submit a support request|--|
-**So I can** complete the form and send it|
+**I want** to see the suggested FAQ|--|
+**So I can** read it at the FAQ section|
 
 **Desired behaviour:** 
-By accessing the support form and completing it I will be able to submit my support request.
+By accessing the FAQ it will be possible to read the suggested FAQ.
 
 **Steps to test:**
  1. Access to https://www.voicemod.net/
  2. Click on FAQ link.
- 3. Click on Submit a request.
- 4. Enter a value in "Let´s talk!" among the drop-down options
- 5. Enter a message
- 6. Enter a name
- 7. Enter a Email address
- 8. Enter a Country
- 9. Enter a platform
- 10. Select a product  among the drop-down options
- 11. Check the checkbox of the privacy policy
- 12. Verify that I am human
- 13. Click on "Send" buttom.
+ 3. Verify items
 
 **Feedback:** 
 
-> This is an important but not critical test case because in case of
-> need, if a user cannot solve a problem in the FAQ, he/she should be
-> able to contact the technical support team. This is very important
-> because it gives the feeling that the brand provides all the necessary
-> procedures to satisfy the customer.
+> It is a non-critical case but helps the end-user or customer to
+> identify the most common questions and answers in relation to frequent
+> problems they might encounter. If these elements are present they can
+> decrease the number of support requests as the end-user will be able
+> to solve their problem on their own.
 
 
 
@@ -189,3 +302,4 @@ By accessing the support form and completing it I will be able to submit my supp
 - The brand logo can be expected to be in the top left corner according to UX standards.
 - It should be possible to change languages using the most popular plugins such as in chrome using Google Translator, in this case some texts are affected by language changes "breaking" the front-end.
 - Check the first login and flows like Set your name, Upload a new image, Set up a banner, Profile bio.
+  
