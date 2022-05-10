@@ -55,20 +55,30 @@ Via **pip**:
 
 
 
-<!-- USAGE EXAMPLES -->
-## :bulb: Usage
+## Improvements & Personal note:
 
+There are some improvements that I would have liked to develop that could be interesting:
 
-With the above requirements it is possible to run the automatic tests. My advice is to use Pycharm as IDE to run it. We can edit the run configuration and add additional arguments like:
-   ```sh
-   --html=reports/test_report.html
-   ```
+- The solution has been developed on MAC OS as there is no version of    Voicemod for MAC OS, I have not been able to verify the download of      the file. The perfect assertion in this verification would be to       check if Selenium has correctly downloaded the executable file, we       could check the binaries, size, metadata... However, in my       environment I use MAC OS and I have seen that there is no version       available to download voicemod on MAC. We can check it with       os.path.isfile (). 
+- The correct way to verify the creation of a user    would be to use an email service with which emails can be generated    and make use of    an API with which the verification code can be obtained.
+- To use the solution in CI/CD pipelines I would use a user    agent configuration similar to the following:
 
+        chromeoptions.add_argument(config["HEADLESS_ARGUMENTS"]["window-size"])
+        chromeoptions.add_argument(config["HEADLESS_ARGUMENTS"]["ignore-errors:"])
+        chromeoptions.add_argument(config["HEADLESS_ARGUMENTS"]["allow-running"])
+        chromeoptions.add_argument(config["HEADLESS_ARGUMENTS"]["disable-extensions"])
+        chromeoptions.add_argument(config["HEADLESS_ARGUMENTS"]["proxy-server"])
+        chromeoptions.add_argument(config["HEADLESS_ARGUMENTS"]["proxy-bypass"])
+        chromeoptions.add_argument(config["HEADLESS_ARGUMENTS"]["maximized"])
+        chromeoptions.add_argument(config["HEADLESS_ARGUMENTS"]["disable-gpu"])
+        chromeoptions.add_argument(config["HEADLESS_ARGUMENTS"]["disable-dev"])
+        chromeoptions.add_argument(config["HEADLESS_ARGUMENTS"]["no-sandbox"])
+- It would be possible to customize the resolution with a code like this:
 
-
-## Improvements
-
-
-## Personal note:
-
-
+       def config_resolution(driver, resolucion):
+            if resolucion == 'default':
+                driver.maximize_window()
+            else:
+                ancho_alto = resolucion.split('x')
+                ancho, alto = ancho_alto[0], ancho_alto[1]
+                driver.set_window_size(ancho, alto)
